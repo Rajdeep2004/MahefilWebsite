@@ -403,7 +403,8 @@ app.get("/", (req, res) => {
 });
 
 // MongoDB connection
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/shayari_social";
+const MONGODB_URI =
+  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/shayari_social";
 
 const startServer = (port = PORT) => {
   const server = app.listen(port, "0.0.0.0", () => {
@@ -433,6 +434,8 @@ mongoose
   })
   .catch((error) => {
     console.error("❌ MongoDB connection failed:", error.message);
-    console.log("Set MONGODB_URI in your .env file or run a local MongoDB instance.");
+    console.log(
+      "Set MONGODB_URI in your .env file or run a local MongoDB instance.",
+    );
     process.exit(1);
   });
