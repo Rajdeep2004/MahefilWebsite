@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mehfil — Shayari & Comedy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span>✦</span> Mehfil</a>
+    <nav>
+      <a href="#feed">Feed</a>
+      <a href="#create">Create</a>
+      <a href="#comedy">Comedy</a>
+    </nav>
+    <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">☾</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">YOUR DAILY DIGITAL MEHFIL</p>
+        <h1>Say it. <em>Feel it.</em> Share it.</h1>
+        <p class="hero-copy">Post shayari with your words, voice, photos and videos — all in one beautiful feed.</p>
+        <a class="primary" href="#create">Create a post <span>→</span></a>
+      </div>
+      <div class="hero-card">
+        <div class="quote-mark">“</div>
+        <p>कुछ लफ़्ज़ दिल से निकलते हैं,<br>और सीधे दिल तक पहुँचते हैं।</p>
+        <small>— Mehfil</small>
+      </div>
+    </section>
+
+    <section class="composer" id="create">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">CREATE</p>
+          <h2>Share your feeling</h2>
+        </div>
+        <span class="status" id="apiStatus">Checking API…</span>
+      </div>
+
+      <form id="postForm">
+        <div class="form-row">
+          <input id="author" name="author" maxlength="40" placeholder="Your name" required>
+          <select id="category" name="category">
+            <option>Shayari</option>
+            <option>Love</option>
+            <option>Sad</option>
+            <option>Motivation</option>
+            <option>Friendship</option>
+            <option>Comedy</option>
+          </select>
+        </div>
+
+        <textarea id="text" name="text" maxlength="1000" placeholder="Write your shayari, joke or thought…" required></textarea>
+
+        <div class="tools">
+          <label class="tool">
+            <input type="file" id="media" name="media" accept="image/*,video/*">
+            <span>🖼️ Add photo/video</span>
+          </label>
+
+          <button type="button" class="tool" id="recordBtn">🎙️ Record voice</button>
+          <span id="recordTime" class="record-time"></span>
+        </div>
+
+        <div id="preview" class="preview hidden"></div>
+
+        <button class="submit-btn" type="submit" id="submitBtn">Publish to Mehfil ✨</button>
+      </form>
+    </section>
+
+    <section id="feed" class="feed-section">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">COMMUNITY</p>
+          <h2>Latest posts</h2>
+        </div>
+        <button id="refreshBtn" class="ghost">↻ Refresh</button>
+      </div>
+      <div id="feedGrid" class="feed-grid"></div>
+    </section>
+
+    <section id="comedy" class="comedy-section">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">LAUGH BREAK</p>
+          <h2>Comedy corner</h2>
+        </div>
+      </div>
+      <div class="video-grid">
+        <article class="video-card">
+          <div class="video-placeholder">😂</div>
+          <h3>Upload your own comedy</h3>
+          <p>Create a post with a comedy video and select the Comedy category.</p>
+        </article>
+        <article class="video-card">
+          <div class="video-placeholder">🎭</div>
+          <h3>Funny moments</h3>
+          <p>Your community comedy videos will appear automatically in the feed.</p>
+        </article>
+        <article class="video-card">
+          <div class="video-placeholder">🤣</div>
+          <h3>Make someone laugh</h3>
+          <p>Keep videos original or use media you have permission to share.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>Made with ❤️ for people who write what they feel.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
